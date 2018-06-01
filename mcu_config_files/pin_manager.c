@@ -67,6 +67,8 @@ void PIN_MANAGER_Initialize(void)
     /*set pins for PGD1 and PGC1*/
     ANSELBbits.ANSB0 = 0 ; /*set digital for PGD1*/
     ANSELBbits.ANSB1 = 0 ; /*set digital for PGC1*/
+    /*set pins for RB3*/
+    ANSELBbits.ANSB3 = 0 ; /*set digital for RB3*/
   
     /****************************************************************************
      * Set the PPS
