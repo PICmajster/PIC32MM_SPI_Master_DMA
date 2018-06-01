@@ -68,6 +68,19 @@ void PIN_MANAGER_Initialize(void)
     ANSELBbits.ANSB0 = 0 ; /*set digital for PGD1*/
     ANSELBbits.ANSB1 = 0 ; /*set digital for PGC1*/
   
+    /****************************************************************************
+     * Set the PPS
+     ***************************************************************************/
+    SYSTEM_RegUnlock();          /*unlock PPS*/
+    RPCONbits.IOLOCK = 0;
+
+    RPINR11bits.SDI2R = 0x0018; /*RA9->SPI2:SDI2;*/
+    RPOR2bits.RP9R = 0x0008;    /*RB3->SPI2:SDO2;*/
+    RPOR3bits.RP13R = 0x0009;   /*RB8->SPI2:SCK2OUT;*/
+
+    RPCONbits.IOLOCK = 1;       /*lock   PPS*/
+	
+    SYSTEM_RegLock(); 
 
 }
 /* Piny analogowe na starcie, ustawienie : 0 - cyfrowe / 1 - analogowe
