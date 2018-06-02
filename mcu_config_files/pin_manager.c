@@ -85,7 +85,7 @@ void PIN_MANAGER_Initialize(void)
     SYSTEM_RegLock(); 
 
 }
-/* Piny analogowe na starcie, ustawienie : 0 - cyfrowe / 1 - analogowe
+/* Piny analogowe na starcie oznaczone w MCU ANx, ustawienie : 0 - cyfrowe / 1 - analogowe
 ANSELA
 RA0 --> ANSA0
 RA1 --> ANSA1
@@ -102,4 +102,8 @@ RC0 --> ANSC0
 RC1 --> ANSC1
 RC5 --> ANSC5
 RC8 --> ANSC8
-*/
+
+ UWAGA nie wszystkie piny analogowe na starcie s? uj?te w strukturze ANSELxbits
+ np.RA6,RB13,RB14,RB15 w takim przypadku musimy u?y? zapisu bezpo?rednio do rejestru
+ ANSELx = warto?? ;
+ */
