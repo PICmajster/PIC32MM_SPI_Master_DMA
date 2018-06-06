@@ -18,11 +18,5 @@
 
 void SPI2_Initialize (void);
 
-static void SPI2_Exchange( uint8_t *pTransmitData, uint8_t *pReceiveData );
-static uint16_t SPI2_ExchangeBuffer(uint8_t *pTransmitData, uint16_t byteCount, uint8_t *pReceiveData);
-uint8_t SPI2_Exchange8bit( uint8_t data );
-uint16_t SPI2_Exchange8bitBuffer(uint8_t *dataTransmitted, uint16_t byteCount, uint8_t *dataReceived);
-
-
 
 #endif
