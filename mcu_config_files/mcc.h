@@ -10,15 +10,17 @@
 #ifndef MCC_H
 #define	MCC_H
 #define WDT_CLR_KEY 0x5743
-#include "pin_manager.h"
-#include "interrupt_manager.h"
-#include "exceptions.h"
 #include <xc.h>
 #include <string.h> /*for memset() etc*/
 #include <stdint.h> /*uint8_t etc.*/
 #include <stdbool.h>
+#include <string.h>
 #include <sys/attribs.h> /*for Interrupt*/
 #include <stdio.h> /*sprintf() etc*/
+#include <stdlib.h>
+#include "pin_manager.h"
+#include "interrupt_manager.h"
+#include "exceptions.h"
 
 
 #define _XTAL_FREQ  24000000UL

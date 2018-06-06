@@ -37,8 +37,12 @@ void PIN_MANAGER_Initialize(void)
     TRISBbits.TRISB8 = 0 ; /*SCK Master*/
     /*set Output for LED*/
     TRISBbits.TRISB6 = 0 ; /*LED*/
-   
-    
+    /*set Output for LCD DOGM162W-A*/
+    TRISBbits.TRISB10 = 0;
+    TRISBbits.TRISB11 = 0;
+    TRISCbits.TRISC3 = 0;
+    TRISCbits.TRISC4 = 0;
+    TRISCbits.TRISC5 = 0;
     
       
     /****************************************************************************
@@ -64,12 +68,13 @@ void PIN_MANAGER_Initialize(void)
     /****************************************************************************
      * Setting the Analog/Digital Configuration SFR(s)
      ***************************************************************************/
-    /*set pins for PGD1 and PGC1*/
+    /*set digital pins for PGD1 and PGC1*/
     ANSELBbits.ANSB0 = 0 ; /*set digital for PGD1*/
     ANSELBbits.ANSB1 = 0 ; /*set digital for PGC1*/
-    /*set pins for RB3*/
+    /*set digital pins for RB3*/
     ANSELBbits.ANSB3 = 0 ; /*set digital for RB3*/
-  
+    /*set digital pins for RC5*/
+    ANSELCbits.ANSC5 = 0;
     /****************************************************************************
      * Set the PPS
      ***************************************************************************/
