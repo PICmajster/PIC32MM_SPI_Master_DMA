@@ -11,7 +11,7 @@
 #define _DMA_H
 #include <stdint.h> /*uint8_t etc.*/
 
-char myWriteBuffer[] = "Witaj DMA"; /*bufor nadawczy*/
+//char myWriteBuffer[] = "Witaj DMA"; /*bufor nadawczy*/
 char myReadBuffer[10] ; /*bufor odbiorczy*/
 void DMA0_Initialize (void);
 
