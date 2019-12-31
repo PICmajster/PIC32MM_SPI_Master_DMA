@@ -9,6 +9,8 @@
 #include "mcu_config_files/mcc.h"
 #include "dma.h"
 
+char myWriteBuffer[] = "Witaj DMA"; /*bufor nadawczy*/
+
 void DMA0_Initialize(void){
 
 IEC3bits.DMA0IE = 0 ; /*disable DMA0 interrupt, datasheet page 66*/
